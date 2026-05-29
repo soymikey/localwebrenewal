@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A redesigned HVAC website concept for New York Heating & Air Conditioning of Staten Island.">
+    <title>New York Heating & Air Conditioning | Staten Island HVAC</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="New York Heating homepage">
+        <span class="brand-mark">NY</span>
+        <span>
+          <strong>New York Heating</strong>
+          <small>Staten Island HVAC</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a href="#services">Services</a>
+        <a href="#emergency">Emergency</a>
+        <a href="#proof">Why Us</a>
+        <a href="#estimate">Estimate</a>
+      </nav>
+
+      <a class="header-call" href="tel:7183567100">Call 718-356-7100</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Licensed, bonded, EPA certified</p>
+          <h1 id="hero-title">24/7 heating and AC repair in Staten Island</h1>
+          <p class="hero-copy">
+            Fast local HVAC service from a Staten Island contractor. Emergency repairs,
+            system replacements, maintenance agreements, and direct owner contact day or night.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="tel:7183567100">Call Now</a>
+            <button class="button button-secondary" type="button" data-open-estimate>Request Estimate</button>
+          </div>
+          <dl class="hero-stats" aria-label="Company highlights">
+            <div>
+              <dt>24/7</dt>
+              <dd>Emergency service</dd>
+            </div>
+            <div>
+              <dt>SI</dt>
+              <dd>Staten Island only</dd>
+            </div>
+            <div>
+              <dt>#1256532</dt>
+              <dd>H.I.C. license</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Service guarantees">
+        <span>Speak directly with the owner</span>
+        <span>Repairs on all makes and models</span>
+        <span>Free estimates on system replacements</span>
+        <span>Service and maintenance agreements</span>
+      </section>
+
+      <section class="section split-section" id="services">
+        <div class="section-intro">
+          <p class="eyebrow">What customers need fast</p>
+          <h2>Clear services for urgent homeowners</h2>
+          <p>
+            The original site has useful service information. This redesign turns it into
+            simple paths that match how people search when heat or AC stops working.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-icon">AC</span>
+            <h3>AC Repair</h3>
+            <p>Cooling diagnostics, compressor issues, motor repair, Freon leak help, and seasonal tune-ups.</p>
+            <a href="tel:7183567100">Call for AC service</a>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">HEAT</span>
+            <h3>Heating Repair</h3>
+            <p>Fast help for furnaces, heating systems, winter breakdowns, and replacement estimates.</p>
+            <a href="tel:7183567100">Call for heating help</a>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">24</span>
+            <h3>Emergency Service</h3>
+            <p>Available nights and weekends when normal business hours are not good enough.</p>
+            <a href="#emergency">See emergency option</a>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">PM</span>
+            <h3>Maintenance Plans</h3>
+            <p>Preventive maintenance and service agreements to keep systems running through peak seasons.</p>
+            <a href="#estimate">Request a plan</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="emergency-band" id="emergency">
+        <div>
+          <p class="eyebrow">Emergency HVAC in Staten Island</p>
+          <h2>When heat or AC fails, the next click should be a phone call.</h2>
+        </div>
+        <a class="button button-primary" href="tel:7183567100">Call 718-356-7100</a>
+      </section>
+
+      <section class="section proof-section" id="proof">
+        <div class="proof-copy">
+          <p class="eyebrow">Trust signals moved up</p>
+          <h2>What the old website already had, made visible</h2>
+          <p>
+            The business already has strong local credibility. The redesign puts those facts
+            where mobile visitors can see them before deciding who to call.
+          </p>
+        </div>
+
+        <div class="proof-list">
+          <div>
+            <strong>EPA Certified</strong>
+            <span>Important for refrigerant-related service work.</span>
+          </div>
+          <div>
+            <strong>Licensed & Bonded</strong>
+            <span>Reassures homeowners before inviting a technician into the home.</span>
+          </div>
+          <div>
+            <strong>Staten Island Focus</strong>
+            <span>A local-only service area supports faster response expectations.</span>
+          </div>
+          <div>
+            <strong>Owner Contact</strong>
+            <span>A rare trust point, especially for emergency calls after hours.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section estimate-section" id="estimate">
+        <div>
+          <p class="eyebrow">Fast estimate</p>
+          <h2>Need HVAC service in Staten Island?</h2>
+          <p>
+            Call now for urgent repair, or send a quick request for replacement and maintenance estimates.
+          </p>
+        </div>
+        <form class="estimate-form" data-estimate-form>
+          <label>
+            Name
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Phone
+            <input name="phone" autocomplete="tel" inputmode="tel" required>
+          </label>
+          <label>
+            Service needed
+            <select name="service" required>
+              <option value="">Choose one</option>
+              <option>Emergency repair</option>
+              <option>AC repair</option>
+              <option>Heating repair</option>
+              <option>System replacement estimate</option>
+              <option>Maintenance agreement</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="Tell us what is happening with your system."></textarea>
+          </label>
+          <button class="button button-primary" type="submit">Send Request</button>
+          <p class="form-note" data-form-note aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>New York Heating & Air Conditioning</strong>
+        <span>Concept redesign for the current Staten Island HVAC website.</span>
+      </div>
+      <div>
+        <a href="tel:7183567100">718-356-7100</a>
+        <span>H.I.C. License #1256532</span>
+      </div>
+    </footer>
+
+    <div class="mobile-call-bar" data-call-bar>
+      <a href="tel:7183567100">Call 718-356-7100</a>
+      <button type="button" data-open-estimate>Estimate</button>
+    </div>
+
+    <dialog class="estimate-dialog" data-dialog>
+      <button class="dialog-close" type="button" data-close-dialog aria-label="Close estimate form">Close</button>
+      <h2>Request an estimate</h2>
+      <p>For a live business site, this would connect to email, SMS, or a CRM.</p>
+      <form class="estimate-form compact" data-dialog-form>
+        <label>
+          Name
+          <input name="name" autocomplete="name" required>
+        </label>
+        <label>
+          Phone
+          <input name="phone" autocomplete="tel" inputmode="tel" required>
+        </label>
+        <label>
+          Service needed
+          <select name="service" required>
+            <option value="">Choose one</option>
+            <option>Emergency repair</option>
+            <option>AC repair</option>
+            <option>Heating repair</option>
+            <option>Replacement estimate</option>
+          </select>
+        </label>
+        <button class="button button-primary" type="submit">Send Request</button>
+        <p class="form-note" data-dialog-note aria-live="polite"></p>
+      </form>
+    </dialog>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
