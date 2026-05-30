@@ -418,6 +418,31 @@ textarea {
   align-items: start;
 }
 
+.changes-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.82fr) minmax(360px, 1fr);
+  gap: clamp(32px, 7vw, 94px);
+  background: #f4f0e6;
+}
+
+.changes-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.changes-list li {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--steel);
+  font-weight: 800;
+  line-height: 1.5;
+}
+
 .estimate-form {
   display: grid;
   gap: 16px;
@@ -475,6 +500,7 @@ textarea {
 .site-footer div,
 .site-footer strong,
 .site-footer span,
+.site-footer small,
 .site-footer a {
   display: block;
 }
@@ -482,6 +508,13 @@ textarea {
 .site-footer span {
   margin-top: 6px;
   color: rgba(255, 255, 255, 0.65);
+}
+
+.site-footer small {
+  max-width: 680px;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.54);
+  line-height: 1.45;
 }
 
 .mobile-call-bar {
@@ -605,6 +638,7 @@ textarea {
   .trust-strip,
   .split-section,
   .proof-section,
+  .changes-section,
   .estimate-section {
     grid-template-columns: 1fr;
   }
