@@ -8,6 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         demo: resolve(__dirname, "demo/index.html"),
         newYorkHeating: resolve(__dirname, "demo/new-york-heating/index.html"),
+        iceAgeMechanical: resolve(__dirname, "demo/ice-age-mechanical/index.html"),
       },
     },
   },
