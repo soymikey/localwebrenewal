@@ -2,18 +2,19 @@ const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
 const callBar = document.querySelector("[data-call-bar]");
-const dialog = document.querySelector("[data-dialog]");
+const estimateDialog = document.querySelector("[data-estimate-dialog]");
+const notesDialog = document.querySelector("[data-notes-dialog]");
 const openEstimateButtons = document.querySelectorAll("[data-open-estimate]");
-const closeDialogButton = document.querySelector("[data-close-dialog]");
+const openNotesButtons = document.querySelectorAll("[data-open-notes]");
+const closeEstimateButton = document.querySelector("[data-close-estimate]");
+const closeNotesButton = document.querySelector("[data-close-notes]");
 const estimateForm = document.querySelector("[data-estimate-form]");
 const dialogForm = document.querySelector("[data-dialog-form]");
 
 function syncChrome() {
-  const isScrolled = window.scrollY > 24;
+  const isScrolled = window.scrollY > 28;
   header.classList.toggle("is-scrolled", isScrolled);
-  if (callBar) {
-    callBar.classList.toggle("is-visible", window.scrollY > 420);
-  }
+  callBar.classList.toggle("is-visible", window.scrollY > 520);
 }
 
 function closeMenu() {
@@ -21,17 +22,29 @@ function closeMenu() {
   menuToggle.setAttribute("aria-expanded", "false");
 }
 
-function handleFakeSubmit(event, noteSelector) {
-  event.preventDefault();
-  const note = document.querySelector(noteSelector);
-  if (!note) return;
+function openDialog(dialog, fallbackSelector) {
+  closeMenu();
 
-  note.textContent = "Demo request captured. A live site would send this to the business.";
-  event.currentTarget.reset();
+  if (dialog && typeof dialog.showModal === "function") {
+    dialog.showModal();
+    return;
+  }
+
+  document.querySelector(fallbackSelector)?.scrollIntoView({ behavior: "smooth" });
+}
+
+function handleFakeSubmit(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const status = form.querySelector("[data-form-status]");
+
+  if (status) {
+    status.textContent = "Demo request captured. A live site would send this to the business.";
+  }
 }
 
 window.addEventListener("scroll", syncChrome, { passive: true });
-window.addEventListener("load", syncChrome);
+syncChrome();
 
 menuToggle.addEventListener("click", () => {
   const isOpen = header.classList.toggle("is-open");
@@ -39,43 +52,32 @@ menuToggle.addEventListener("click", () => {
 });
 
 nav.addEventListener("click", (event) => {
-  if (event.target.matches("a")) {
+  const target = event.target;
+
+  if (target instanceof HTMLAnchorElement || target instanceof HTMLButtonElement) {
     closeMenu();
   }
 });
 
 openEstimateButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    if (dialog.showModal) {
-      dialog.showModal();
-      return;
-    }
+  button.addEventListener("click", () => openDialog(estimateDialog, "#estimate"));
+});
 
-    document.querySelector("#estimate")?.scrollIntoView({ behavior: "smooth" });
+openNotesButtons.forEach((button) => {
+  button.addEventListener("click", () => openDialog(notesDialog, "#sources"));
+});
+
+closeEstimateButton.addEventListener("click", () => estimateDialog.close());
+closeNotesButton.addEventListener("click", () => notesDialog.close());
+
+[estimateDialog, notesDialog].forEach((dialog) => {
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      dialog.close();
+    }
   });
 });
 
-closeDialogButton.addEventListener("click", () => {
-  dialog.close();
-});
-
-dialog.addEventListener("click", (event) => {
-  const dialogBounds = dialog.getBoundingClientRect();
-  const clickedOutside =
-    event.clientX < dialogBounds.left ||
-    event.clientX > dialogBounds.right ||
-    event.clientY < dialogBounds.top ||
-    event.clientY > dialogBounds.bottom;
-
-  if (clickedOutside) {
-    dialog.close();
-  }
-});
-
-estimateForm.addEventListener("submit", (event) => {
-  handleFakeSubmit(event, "[data-form-note]");
-});
-
-dialogForm.addEventListener("submit", (event) => {
-  handleFakeSubmit(event, "[data-dialog-note]");
+[estimateForm, dialogForm].forEach((form) => {
+  form.addEventListener("submit", handleFakeSubmit);
 });

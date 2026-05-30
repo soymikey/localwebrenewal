@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A redesigned HVAC website concept for New York Heating & Air Conditioning of Staten Island.">
+    <meta name="description" content="Concept homepage renewal for New York Heating & Air Conditioning of Staten Island.">
     <meta name="robots" content="noindex, nofollow">
-    <title>New York Heating & Air Conditioning | Staten Island HVAC</title>
+    <title>New York Heating & Air Conditioning | Staten Island HVAC Concept</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="New York Heating homepage">
+      <a class="brand" href="#top" aria-label="New York Heating and Air Conditioning concept homepage">
         <span class="brand-mark">NY</span>
         <span>
           <strong>New York Heating</strong>
-          <small>Staten Island HVAC</small>
+          <small>Heating & Air Conditioning</small>
         </span>
       </a>
 
@@ -27,10 +27,9 @@
       <nav class="site-nav" id="site-nav" data-nav>
         <a href="#services">Services</a>
         <a href="#emergency">Emergency</a>
-        <a href="#proof">Why Us</a>
-        <a href="#reputation">Reviews</a>
+        <a href="#reviews">Reviews</a>
         <a href="#estimate">Estimate</a>
-        <a href="#changes">Owner Notes</a>
+        <button type="button" data-open-notes>Owner Notes</button>
       </nav>
 
       <a class="header-call" href="tel:7183567100">Call 718-356-7100</a>
@@ -38,135 +37,150 @@
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true"></div>
-        <div class="hero-overlay"></div>
+        <div class="hero-backdrop" aria-hidden="true"></div>
         <div class="hero-content">
-          <p class="eyebrow">Licensed, bonded, EPA certified</p>
-          <h1 id="hero-title">24/7 heating and AC repair in Staten Island</h1>
+          <p class="eyebrow">Staten Island heating & AC service</p>
+          <h1 id="hero-title">24/7 heating and air conditioning repair in Staten Island.</h1>
           <p class="hero-copy">
-            Fast local HVAC service from a Staten Island contractor. Emergency repairs,
-            system replacements, maintenance agreements, and direct owner contact day or night.
+            Local HVAC help for emergency repairs, system replacements, preventive maintenance,
+            and service on all makes and models.
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="tel:7183567100">Call Now</a>
-            <button class="button button-secondary" type="button" data-open-estimate>Request Estimate</button>
+
+          <div class="rating-badge" aria-label="Google rating summary">
+            <span class="rating-stars" aria-label="5 star rating">★★★★★</span>
+            <strong>4.9 Google rating</strong>
+            <span>124 public reviews via Birdeye</span>
           </div>
-          <dl class="hero-stats" aria-label="Company highlights">
+
+          <div class="hero-actions">
+            <a class="button primary" href="tel:7183567100">Call Now</a>
+            <button class="button secondary" type="button" data-open-estimate>Request Estimate</button>
+            <button class="button ghost" type="button" data-open-notes>Owner Notes</button>
+          </div>
+
+          <dl class="hero-proof" aria-label="Public trust signals">
             <div>
-              <dt>24/7</dt>
-              <dd>Emergency service</dd>
-            </div>
-            <div>
-              <dt>SI</dt>
-              <dd>Staten Island only</dd>
+              <dt>EPA</dt>
+              <dd>Certified</dd>
             </div>
             <div>
               <dt>#1256532</dt>
               <dd>H.I.C. license</dd>
             </div>
+            <div>
+              <dt>24/7</dt>
+              <dd>Emergency service</dd>
+            </div>
           </dl>
         </div>
+
+        <aside class="hero-card" aria-label="Current website source preview">
+          <img src="assets/current-site-service.jpg" alt="HVAC equipment photo from the current public website">
+          <div>
+            <span>Public website source</span>
+            <strong>Servicing Staten Island only</strong>
+            <p>Current-site facts reorganized into a phone-first homepage preview.</p>
+          </div>
+        </aside>
       </section>
 
-      <section class="trust-strip" aria-label="Service guarantees">
+      <section class="trust-strip" aria-label="Service highlights">
         <span>Speak directly with the owner</span>
-        <span>Repairs on all makes and models</span>
         <span>Free estimates on system replacements</span>
-        <span>Service and maintenance agreements</span>
+        <span>Licensed, bonded, EPA certified</span>
+        <span>Repairs on all makes and models</span>
       </section>
 
-      <section class="section split-section" id="services">
-        <div class="section-intro">
-          <p class="eyebrow">What customers need fast</p>
-          <h2>Clear services for urgent homeowners</h2>
-          <p>
-            The original site has useful service information. This redesign turns it into
-            simple paths that match how people search when heat or AC stops working.
-          </p>
+      <section class="section pain-section">
+        <div>
+          <p class="eyebrow">When comfort cannot wait</p>
+          <h2>No heat? AC stopped working? Need help after hours?</h2>
+        </div>
+        <p>
+          The current website already says emergency service is available 24 hours a day,
+          7 days a week. This concept brings that message higher so mobile visitors can act faster.
+        </p>
+      </section>
+
+      <section class="section services-section" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">Clear service paths</p>
+          <h2>Grouped by what homeowners need first.</h2>
         </div>
 
         <div class="service-grid">
           <article class="service-card">
-            <span class="service-icon">AC</span>
+            <span>01</span>
             <h3>AC Repair</h3>
-            <p>Cooling diagnostics, compressor issues, motor repair, Freon leak help, and seasonal tune-ups.</p>
-            <a href="tel:7183567100">Call for AC service</a>
+            <p>Central air repair, compressor issues, motor repair, Freon leak help, and cooling diagnostics.</p>
+            <a href="tel:7183567100">Call for AC help</a>
           </article>
           <article class="service-card">
-            <span class="service-icon">HEAT</span>
+            <span>02</span>
             <h3>Heating Repair</h3>
-            <p>Fast help for furnaces, heating systems, winter breakdowns, and replacement estimates.</p>
+            <p>Heating repair, furnace repair and replacement, winter breakdowns, and system service.</p>
             <a href="tel:7183567100">Call for heating help</a>
           </article>
           <article class="service-card">
-            <span class="service-icon">24</span>
+            <span>03</span>
             <h3>Emergency Service</h3>
-            <p>Available nights and weekends when normal business hours are not good enough.</p>
+            <p>24-hour help when heating or air conditioning problems happen outside normal working hours.</p>
             <a href="#emergency">See emergency option</a>
           </article>
           <article class="service-card">
-            <span class="service-icon">PM</span>
-            <h3>Maintenance Plans</h3>
-            <p>Preventive maintenance and service agreements to keep systems running through peak seasons.</p>
-            <a href="#estimate">Request a plan</a>
+            <span>04</span>
+            <h3>Maintenance & Replacement</h3>
+            <p>Preventive maintenance, service agreements, duct repair, and free estimates on replacements.</p>
+            <a href="#estimate">Request an estimate</a>
           </article>
         </div>
       </section>
 
       <section class="emergency-band" id="emergency">
         <div>
-          <p class="eyebrow">Emergency HVAC in Staten Island</p>
-          <h2>When heat or AC fails, the next click should be a phone call.</h2>
+          <p class="eyebrow">24 hours a day, 7 days a week</p>
+          <h2>Emergency HVAC service should be one tap away.</h2>
+          <p>For urgent heating or AC repairs, visitors should not have to hunt for the phone number.</p>
         </div>
-        <a class="button button-primary" href="tel:7183567100">Call 718-356-7100</a>
+        <a class="button primary" href="tel:7183567100">Call 718-356-7100</a>
       </section>
 
-      <section class="section proof-section" id="proof">
-        <div class="proof-copy">
-          <p class="eyebrow">Trust signals moved up</p>
-          <h2>What the old website already had, made visible</h2>
-          <p>
-            The business already has strong local credibility. The redesign puts those facts
-            where mobile visitors can see them before deciding who to call.
-          </p>
+      <section class="section credibility-section">
+        <div>
+          <p class="eyebrow">Trust signals</p>
+          <h2>Strong public details moved closer to the decision point.</h2>
         </div>
-
-        <div class="proof-list">
-          <div>
-            <strong>EPA Certified</strong>
-            <span>Important for refrigerant-related service work.</span>
-          </div>
-          <div>
+        <div class="cred-grid">
+          <article>
             <strong>Licensed & Bonded</strong>
-            <span>Reassures homeowners before inviting a technician into the home.</span>
-          </div>
-          <div>
-            <strong>Staten Island Focus</strong>
-            <span>A local-only service area supports faster response expectations.</span>
-          </div>
-          <div>
+            <p>Public website trust signal for homeowners comparing local HVAC providers.</p>
+          </article>
+          <article>
+            <strong>EPA Certified</strong>
+            <p>Important for refrigerant-related air conditioning work and service credibility.</p>
+          </article>
+          <article>
             <strong>Owner Contact</strong>
-            <span>A rare trust point, especially for emergency calls after hours.</span>
-          </div>
+            <p>The current site says callers can speak directly with the owner day or night.</p>
+          </article>
+          <article>
+            <strong>Staten Island Focus</strong>
+            <p>A local-only service area helps support a faster, clearer response expectation.</p>
+          </article>
         </div>
       </section>
 
-      <section class="section reputation-section" id="reputation">
+      <section class="section reviews-section" id="reviews">
         <div>
           <p class="eyebrow">Public reputation</p>
-          <h2>Strong Google review signal, shown with source context.</h2>
+          <h2>Review proof with clear source context.</h2>
           <p>
-            Birdeye's public profile lists New York Heating and Air Conditioning at
-            4.9 stars from 124 Google reviews. A live client site should confirm this
-            directly with the business before launch.
+            Birdeye's public profile lists a 4.9 Google rating from 124 reviews for
+            New York Heating and Air Conditioning. A live client site should confirm
+            this directly with the business before launch.
           </p>
         </div>
-        <div class="review-panel" aria-label="Public Google review summary">
-          <div class="rating-card">
-            <strong>4.9</strong>
-            <span>Google rating</span>
-            <small>124 public reviews via Birdeye</small>
-          </div>
+        <div class="review-grid">
           <blockquote>
             "Danny was very knowledgeable and professional."
             <cite>Google review excerpt via Birdeye</cite>
@@ -180,12 +194,14 @@
 
       <section class="section estimate-section" id="estimate">
         <div>
-          <p class="eyebrow">Fast estimate</p>
-          <h2>Need HVAC service in Staten Island?</h2>
+          <p class="eyebrow">Quick request</p>
+          <h2>Short form for non-emergency estimates.</h2>
           <p>
-            Call now for urgent repair, or send a quick request for replacement and maintenance estimates.
+            Phone remains the primary action. The form is a demo-only preview of how a live site
+            could capture replacement or maintenance requests.
           </p>
         </div>
+
         <form class="estimate-form" data-estimate-form>
           <label>
             Name
@@ -196,56 +212,43 @@
             <input name="phone" autocomplete="tel" inputmode="tel" required>
           </label>
           <label>
-            Service needed
+            Service Needed
             <select name="service" required>
               <option value="">Choose one</option>
               <option>Emergency repair</option>
               <option>AC repair</option>
               <option>Heating repair</option>
-              <option>System replacement estimate</option>
-              <option>Maintenance agreement</option>
+              <option>System replacement</option>
+              <option>Maintenance</option>
             </select>
           </label>
           <label>
             Message
-            <textarea name="message" rows="4" placeholder="Tell us what is happening with your system."></textarea>
+            <textarea name="message" rows="4" placeholder="What is happening with the system?"></textarea>
           </label>
-          <button class="button button-primary" type="submit">Send Request</button>
-          <p class="form-note" data-form-note aria-live="polite"></p>
+          <button class="button primary" type="submit">Request Service</button>
+          <p class="form-note" data-form-status aria-live="polite"></p>
         </form>
       </section>
 
-      <section class="section changes-section" id="changes" aria-labelledby="changes-title">
+      <section class="section source-section" id="sources">
         <div>
-          <p class="eyebrow">What changed</p>
-          <h2 id="changes-title">The same business information, presented for faster calls.</h2>
-          <p>
-            This concept keeps the public business details conservative and reorganizes the page
-            around what urgent HVAC visitors need to decide quickly.
-          </p>
+          <p class="eyebrow">Public sources checked</p>
+          <h2>Concept built from traceable public information.</h2>
         </div>
-        <ul class="changes-list">
-          <li>Phone number moved into the first screen and repeated on mobile.</li>
-          <li>Emergency availability made visible before the service list.</li>
-          <li>Services grouped into clear homeowner paths instead of a directory-style list.</li>
-          <li>License, EPA, bonding, and local service-area trust signals moved higher.</li>
-          <li>Public Google review signal added with source context instead of unsupported claims.</li>
-          <li>Current website service copy rewritten for clarity without inventing new facts.</li>
-          <li>Estimate request simplified into a short demo-only form.</li>
+        <ul>
+          <li>Current website: newyorkheatingsi.com</li>
+          <li>Website image source: public images from the current business website</li>
+          <li>Review source: Birdeye public profile showing Google reviews</li>
+          <li>Final launch would require client-approved brand assets and confirmation.</li>
         </ul>
-        <div class="source-note">
-          <strong>Public sources checked</strong>
-          <span>Current website: newyorkheatingsi.com</span>
-          <span>Review summary: Birdeye public profile showing Google reviews</span>
-          <span>Visual treatment: neutral concept image, not presented as client-approved photography</span>
-        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div>
         <strong>New York Heating & Air Conditioning</strong>
-        <span>Concept redesign for the current Staten Island HVAC website.</span>
+        <span>Concept homepage renewal for the current Staten Island HVAC website.</span>
         <small>Concept demo created from publicly available business information. Not affiliated with or approved by the business unless stated otherwise.</small>
       </div>
       <div>
@@ -259,9 +262,9 @@
       <button type="button" data-open-estimate>Estimate</button>
     </div>
 
-    <dialog class="estimate-dialog" data-dialog>
-      <button class="dialog-close" type="button" data-close-dialog aria-label="Close estimate form">Close</button>
-      <h2>Request an estimate</h2>
+    <dialog class="estimate-dialog" data-estimate-dialog>
+      <button class="dialog-close" type="button" data-close-estimate aria-label="Close estimate form">Close</button>
+      <h2>Request service</h2>
       <p>For a live business site, this would connect to email, SMS, or a CRM.</p>
       <form class="estimate-form compact" data-dialog-form>
         <label>
@@ -273,18 +276,35 @@
           <input name="phone" autocomplete="tel" inputmode="tel" required>
         </label>
         <label>
-          Service needed
+          Service Needed
           <select name="service" required>
             <option value="">Choose one</option>
             <option>Emergency repair</option>
             <option>AC repair</option>
             <option>Heating repair</option>
-            <option>Replacement estimate</option>
+            <option>System replacement</option>
+            <option>Maintenance</option>
           </select>
         </label>
-        <button class="button button-primary" type="submit">Send Request</button>
-        <p class="form-note" data-dialog-note aria-live="polite"></p>
+        <button class="button primary" type="submit">Request Service</button>
+        <p class="form-note" data-form-status aria-live="polite"></p>
       </form>
+    </dialog>
+
+    <dialog class="notes-dialog" data-notes-dialog>
+      <button class="dialog-close" type="button" data-close-notes aria-label="Close owner notes">Close</button>
+      <p class="eyebrow">Owner Notes</p>
+      <h2>What changed in this concept</h2>
+      <ul class="notes-list">
+        <li>Phone number and Google rating moved into the hero area.</li>
+        <li>Emergency service is visible before the service list.</li>
+        <li>Services are grouped by homeowner intent instead of a long directory.</li>
+        <li>License, EPA, owner contact, and Staten Island focus are moved higher.</li>
+        <li>Review proof is shown with source context instead of unsupported claims.</li>
+        <li>Current-site copy is rewritten for clarity without inventing new facts.</li>
+        <li>Website images are used conservatively as concept-demo public assets.</li>
+      </ul>
+      <p class="notes-source">This concept uses public information from the current website and public review listings.</p>
     </dialog>
 
     <script type="module" src="script.js"></script>
