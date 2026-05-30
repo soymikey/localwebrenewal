@@ -390,6 +390,10 @@ h3 {
   padding: clamp(64px, 9vw, 112px) clamp(18px, 5vw, 72px);
 }
 
+.section > * {
+  min-width: 0;
+}
+
 .section p {
   color: var(--muted);
   font-size: 1.05rem;
@@ -584,6 +588,7 @@ textarea {
   color: var(--ink);
   font-weight: 800;
   line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 .site-footer {
