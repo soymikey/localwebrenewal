@@ -7,7 +7,7 @@
   --line: #cdd9e4;
   --blue: #0874d1;
   --blue-dark: #083f73;
-  --gold: #f5b942;
+  --frost: #87d4ff;
   --shadow: 0 24px 64px rgba(10, 28, 48, 0.18);
   color: var(--ink);
   background: var(--ice);
@@ -246,35 +246,6 @@ h3 {
   line-height: 1.58;
 }
 
-.rating-badge {
-  width: fit-content;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 12px;
-  align-items: center;
-  margin: 26px 0 0;
-  padding: 12px 14px;
-  border: 1px solid var(--line);
-  border-color: rgba(255, 255, 255, 0.42);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.16);
-}
-
-.rating-stars {
-  color: var(--gold);
-  letter-spacing: 0.04em;
-}
-
-.rating-badge strong {
-  color: var(--ink);
-}
-
-.rating-badge span:last-child {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -402,10 +373,9 @@ h3 {
   line-height: 1.68;
 }
 
-.pain-section,
+.owner-signal,
 .credibility-section,
-.product-section,
-.reviews-section,
+.dealer-section,
 .estimate-section,
 .source-section {
   display: grid;
@@ -414,8 +384,8 @@ h3 {
   align-items: start;
 }
 
-.pain-section,
-.product-section,
+.owner-signal,
+.dealer-section,
 .source-section {
   background: var(--panel);
 }
@@ -439,8 +409,7 @@ h3 {
 
 .service-card,
 .cred-grid article,
-.rating-panel,
-.product-card {
+.dealer-card {
   min-height: 250px;
   display: flex;
   flex-direction: column;
@@ -463,6 +432,11 @@ h3 {
   color: var(--blue-dark);
   font-size: 0.78rem;
   font-weight: 950;
+}
+
+.service-card.urgent {
+  border-color: rgba(8, 116, 209, 0.36);
+  background: linear-gradient(180deg, #ffffff 0%, #eef7ff 100%);
 }
 
 .service-card h3,
@@ -501,8 +475,7 @@ h3 {
   color: rgba(255, 255, 255, 0.72);
 }
 
-.credibility-section,
-.reviews-section {
+.credibility-section {
   background: var(--white);
 }
 
@@ -514,40 +487,26 @@ h3 {
   min-height: 170px;
 }
 
-.product-card {
+.dealer-card {
   min-height: 190px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(120px, 190px) 1fr;
+  gap: 24px;
+  align-items: center;
 }
 
-.product-card img {
+.dealer-card img {
   width: min(220px, 100%);
   height: auto;
 }
 
-.product-card span {
-  margin-top: 22px;
-  color: var(--muted);
-  font-weight: 850;
-}
-
-.rating-panel {
-  min-height: 190px;
-  justify-content: center;
-}
-
-.rating-panel .rating-stars {
+.dealer-card strong {
+  color: var(--ink);
   font-size: 1.35rem;
 }
 
-.rating-panel strong {
-  margin-top: 10px;
-  color: var(--ink);
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  line-height: 0.95;
-}
-
-.rating-panel p {
-  margin: 12px 0 0;
+.dealer-card p {
+  margin: 10px 0 0;
 }
 
 .estimate-form {
@@ -767,10 +726,9 @@ textarea {
   }
 
   .hero,
-  .pain-section,
+  .owner-signal,
   .credibility-section,
-  .product-section,
-  .reviews-section,
+  .dealer-section,
   .estimate-section,
   .source-section {
     grid-template-columns: 1fr;
@@ -840,11 +798,10 @@ textarea {
 
   .hero,
   .services-section,
-  .pain-section,
+  .owner-signal,
   .emergency-band,
   .credibility-section,
-  .product-section,
-  .reviews-section,
+  .dealer-section,
   .estimate-section,
   .source-section {
     padding-right: 18px;
@@ -871,21 +828,12 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  .rating-badge,
   .hero-actions .button {
     width: 100%;
   }
 
-  .rating-badge {
-    border-radius: 8px;
-  }
-
-  .rating-badge > * {
-    min-width: 0;
-  }
-
-  .rating-badge span:last-child {
-    flex-basis: 100%;
+  .dealer-card {
+    grid-template-columns: 1fr;
   }
 
   .trust-strip span {
