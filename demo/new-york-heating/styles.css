@@ -767,9 +767,9 @@ textarea {
   }
 
   .site-header {
-    left: 14px;
-    right: 14px;
-    top: 12px;
+    left: 0;
+    right: 0;
+    top: 0;
     padding: 12px;
   }
 
