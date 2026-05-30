@@ -411,6 +411,73 @@ textarea {
   line-height: 1.55;
 }
 
+.reputation-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.78fr) minmax(420px, 1.22fr);
+  gap: clamp(34px, 6vw, 84px);
+  background: var(--white);
+}
+
+.review-panel {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.75fr) repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.rating-card,
+.review-panel blockquote {
+  min-height: 190px;
+  margin: 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.rating-card {
+  display: grid;
+  align-content: center;
+}
+
+.rating-card strong {
+  color: var(--red);
+  font-size: 3.6rem;
+  line-height: 0.9;
+}
+
+.rating-card span,
+.rating-card small {
+  display: block;
+}
+
+.rating-card span {
+  margin-top: 10px;
+  color: var(--steel);
+  font-weight: 950;
+}
+
+.rating-card small {
+  margin-top: 6px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.review-panel blockquote {
+  color: var(--steel);
+  font-size: 1.12rem;
+  font-weight: 850;
+  line-height: 1.45;
+}
+
+.review-panel cite {
+  display: block;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
 .estimate-section {
   display: grid;
   grid-template-columns: minmax(260px, 0.8fr) minmax(360px, 1fr);
@@ -441,6 +508,32 @@ textarea {
   color: var(--steel);
   font-weight: 800;
   line-height: 1.5;
+}
+
+.source-note {
+  grid-column: 2;
+  display: grid;
+  gap: 6px;
+  margin-top: 18px;
+  padding: 18px 20px;
+  border: 1px solid #d8cfbd;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.source-note strong,
+.source-note span {
+  display: block;
+}
+
+.source-note strong {
+  color: var(--steel);
+}
+
+.source-note span {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
 }
 
 .estimate-form {
@@ -638,9 +731,18 @@ textarea {
   .trust-strip,
   .split-section,
   .proof-section,
+  .reputation-section,
   .changes-section,
   .estimate-section {
     grid-template-columns: 1fr;
+  }
+
+  .review-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .source-note {
+    grid-column: auto;
   }
 
   .section-intro {
