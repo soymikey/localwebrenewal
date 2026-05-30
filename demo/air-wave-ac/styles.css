@@ -482,6 +482,29 @@ h3 {
   font-weight: 850;
 }
 
+.location-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(320px, 1fr);
+  gap: clamp(22px, 4vw, 44px);
+  align-items: center;
+  background: var(--white);
+}
+
+.location-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.map-frame {
+  width: 100%;
+  min-height: 360px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
 .estimate-form {
   display: grid;
   gap: 16px;
@@ -702,6 +725,7 @@ textarea {
   .pain-section,
   .credibility-section,
   .manufacturer-section,
+  .location-section,
   .estimate-section,
   .source-section {
     grid-template-columns: 1fr;
@@ -724,6 +748,10 @@ textarea {
   .system-band,
   .site-footer {
     grid-template-columns: 1fr;
+  }
+
+  .map-frame {
+    min-height: 300px;
   }
 }
 
@@ -773,6 +801,7 @@ textarea {
   .system-band,
   .credibility-section,
   .manufacturer-section,
+  .location-section,
   .estimate-section,
   .source-section {
     padding-right: 18px;
@@ -793,6 +822,10 @@ textarea {
 
   .source-badge,
   .hero-actions .button {
+    width: 100%;
+  }
+
+  .location-actions .button {
     width: 100%;
   }
 
