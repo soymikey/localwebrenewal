@@ -1,14 +1,14 @@
 :root {
-  --ice: #f4f8fb;
+  --ice: #edf5fb;
   --white: #ffffff;
   --panel: #e8eef3;
-  --ink: #15181d;
-  --muted: #5d6670;
-  --line: #d4dde5;
-  --blue: #0b81f8;
-  --blue-dark: #0758a8;
+  --ink: #10151c;
+  --muted: #566473;
+  --line: #cdd9e4;
+  --blue: #0874d1;
+  --blue-dark: #083f73;
   --gold: #f5b942;
-  --shadow: 0 24px 64px rgba(21, 24, 29, 0.16);
+  --shadow: 0 24px 64px rgba(10, 28, 48, 0.18);
   color: var(--ink);
   background: var(--ice);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -26,6 +26,7 @@ body {
   margin: 0;
   background: var(--ice);
   color: var(--ink);
+  overflow-x: hidden;
 }
 
 a {
@@ -49,7 +50,7 @@ textarea {
   gap: 24px;
   align-items: center;
   padding: 14px clamp(18px, 4vw, 56px);
-  color: var(--ink);
+  color: var(--white);
   transition: background 180ms ease, color 180ms ease, box-shadow 180ms ease;
 }
 
@@ -121,7 +122,7 @@ textarea {
   align-items: center;
   justify-content: center;
   border: 0;
-  border-radius: 999px;
+  border-radius: 8px;
   padding: 0 20px;
   cursor: pointer;
   font-weight: 950;
@@ -140,9 +141,9 @@ textarea {
 }
 
 .button.ghost {
-  border: 1px solid rgba(21, 24, 29, 0.28);
-  background: rgba(255, 255, 255, 0.62);
-  color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  background: rgba(6, 28, 48, 0.28);
+  color: var(--white);
 }
 
 .menu-toggle {
@@ -150,8 +151,8 @@ textarea {
   width: 44px;
   height: 44px;
   border: 0;
-  border-radius: 50%;
-  background: rgba(21, 24, 29, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.18);
   color: currentColor;
 }
 
@@ -167,26 +168,45 @@ textarea {
   position: relative;
   min-height: 94svh;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 410px);
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 460px);
   gap: clamp(24px, 4vw, 54px);
   align-items: end;
   padding: 132px clamp(18px, 6vw, 86px) 58px;
   overflow: hidden;
-  color: var(--ink);
+  color: var(--white);
+  background: var(--ink);
+}
+
+.hero::before,
+.hero::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+}
+
+.hero::before {
+  background-image: url("assets/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.02);
+}
+
+.hero::after {
   background:
-    radial-gradient(circle at 82% 16%, rgba(11, 129, 248, 0.12), transparent 30%),
-    linear-gradient(90deg, rgba(244, 248, 251, 1) 0%, rgba(244, 248, 251, 0.94) 52%, rgba(244, 248, 251, 0.76) 100%);
+    linear-gradient(90deg, rgba(7, 20, 32, 0.92) 0%, rgba(7, 20, 32, 0.72) 46%, rgba(7, 20, 32, 0.28) 100%),
+    linear-gradient(0deg, rgba(7, 20, 32, 0.84) 0%, rgba(7, 20, 32, 0) 42%);
 }
 
 .hero-content,
 .hero-card {
   position: relative;
   z-index: 1;
+  min-width: 0;
 }
 
 .eyebrow {
   margin: 0 0 14px;
-  color: var(--blue);
+  color: #87d4ff;
   font-size: 0.78rem;
   font-weight: 950;
   letter-spacing: 0.12em;
@@ -201,10 +221,11 @@ p {
 }
 
 h1 {
-  max-width: 910px;
+  max-width: 840px;
   margin-bottom: 20px;
   font-size: clamp(3rem, 7.8vw, 6.8rem);
   line-height: 0.96;
+  text-shadow: 0 2px 22px rgba(0, 0, 0, 0.28);
 }
 
 h2 {
@@ -220,7 +241,7 @@ h3 {
 
 .hero-copy {
   max-width: 700px;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.84);
   font-size: clamp(1.05rem, 1.8vw, 1.28rem);
   line-height: 1.58;
 }
@@ -234,9 +255,10 @@ h3 {
   margin: 26px 0 0;
   padding: 12px 14px;
   border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 12px 34px rgba(21, 24, 29, 0.08);
+  border-color: rgba(255, 255, 255, 0.42);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.16);
 }
 
 .rating-stars {
@@ -265,17 +287,19 @@ h3 {
   grid-template-columns: repeat(3, minmax(110px, 1fr));
   gap: 1px;
   width: min(740px, 100%);
-  margin: 36px 0 0;
-  border: 1px solid var(--line);
-  background: var(--line);
+  margin: 22px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.24);
 }
 
 .hero-proof div {
   padding: 18px;
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
 }
 
 .hero-proof dt {
+  color: var(--ink);
   font-size: 1.24rem;
   font-weight: 950;
 }
@@ -288,17 +312,32 @@ h3 {
 .hero-card {
   align-self: end;
   overflow: hidden;
-  border: 1px solid rgba(21, 24, 29, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.26);
   border-radius: 8px;
-  background: var(--ink);
+  background: rgba(7, 20, 32, 0.92);
   color: var(--white);
   box-shadow: var(--shadow);
   backdrop-filter: blur(12px);
 }
 
+.hero-card-label {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 1;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: rgba(7, 20, 32, 0.84);
+  color: #87d4ff;
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .hero-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1.15 / 1;
   object-fit: cover;
   display: block;
 }
@@ -313,7 +352,7 @@ h3 {
 }
 
 .hero-card span {
-  color: var(--blue);
+  color: #87d4ff;
   font-size: 0.75rem;
   font-weight: 950;
   letter-spacing: 0.1em;
@@ -790,7 +829,9 @@ textarea {
   }
 
   h1 {
-    font-size: clamp(2.72rem, 12.6vw, 4.25rem);
+    font-size: clamp(2.18rem, 9.5vw, 3rem);
+    line-height: 1.02;
+    max-width: 13ch;
   }
 
   h2 {
@@ -814,6 +855,14 @@ textarea {
     padding-top: 108px;
   }
 
+  .hero::before {
+    background-position: 28% center;
+  }
+
+  .hero-copy {
+    max-width: 34ch;
+  }
+
   .hero-actions,
   .hero-proof,
   .service-grid,
@@ -829,6 +878,14 @@ textarea {
 
   .rating-badge {
     border-radius: 8px;
+  }
+
+  .rating-badge > * {
+    min-width: 0;
+  }
+
+  .rating-badge span:last-child {
+    flex-basis: 100%;
   }
 
   .trust-strip span {
