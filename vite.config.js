@@ -10,6 +10,8 @@ export default defineConfig({
         newYorkHeating: resolve(__dirname, "demo/new-york-heating/index.html"),
         iceAgeMechanical: resolve(__dirname, "demo/ice-age-mechanical/index.html"),
         coilTechs: resolve(__dirname, "demo/coil-techs/index.html"),
+        tonnageHvac: resolve(__dirname, "demo/tonnage-hvac/index.html"),
+        airWaveAc: resolve(__dirname, "demo/air-wave-ac/index.html"),
       },
     },
   },
