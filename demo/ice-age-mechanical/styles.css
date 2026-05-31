@@ -67,6 +67,7 @@ textarea {
   gap: 12px;
   align-items: center;
   min-width: 250px;
+  min-height: 48px;
 }
 
 .brand img {
@@ -455,6 +456,9 @@ h3 {
 
 .service-card a {
   margin-top: auto;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   color: var(--blue-dark);
   font-weight: 950;
 }
@@ -595,6 +599,12 @@ textarea {
   display: block;
 }
 
+.site-footer a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
 .site-footer span {
   margin-top: 6px;
   color: rgba(255, 255, 255, 0.66);
@@ -630,6 +640,9 @@ textarea {
 
 .mobile-call-bar a,
 .mobile-call-bar button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 46px;
   border: 0;
   border-radius: 999px;
@@ -637,13 +650,15 @@ textarea {
 }
 
 .mobile-call-bar a {
-  display: grid;
-  place-items: center;
+  text-align: center;
   background: var(--blue);
   color: var(--white);
 }
 
 .mobile-call-bar button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0 16px;
   background: var(--white);
   color: var(--ink);
@@ -701,12 +716,17 @@ textarea {
 
 @media (max-width: 980px) {
   .site-header {
-    grid-template-columns: auto auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .brand {
+    min-width: 0;
   }
 
   .menu-toggle {
     display: inline-grid;
     justify-self: end;
+    grid-column: 2;
   }
 
   .site-nav,
@@ -715,11 +735,18 @@ textarea {
   }
 
   .site-header.is-open .site-nav {
-    grid-column: 1 / -1;
+    position: fixed;
+    top: 80px;
+    right: 18px;
+    left: 18px;
+    z-index: 41;
     display: grid;
-    justify-self: stretch;
     gap: 0;
-    padding-top: 10px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--cream);
+    box-shadow: var(--shadow);
   }
 
   .site-header.is-open .site-nav a,
@@ -769,6 +796,12 @@ textarea {
     right: 0;
     top: 0;
     padding: 12px;
+  }
+
+  .site-header.is-open .site-nav {
+    top: 72px;
+    right: 12px;
+    left: 12px;
   }
 
   .brand {

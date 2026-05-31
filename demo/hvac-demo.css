@@ -83,6 +83,14 @@ textarea {
   line-height: 1;
 }
 
+.brand-logo {
+  width: 58px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
 .site-header.is-scrolled .brand-mark,
 .site-header.is-open .brand-mark {
   color: #fff;
@@ -144,7 +152,7 @@ textarea {
 .header-call,
 .button.primary {
   color: #fff;
-  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  background: var(--accent-dark);
   box-shadow: 0 16px 34px color-mix(in srgb, var(--accent) 34%, transparent);
 }
 
@@ -180,7 +188,11 @@ textarea {
   padding: 132px clamp(18px, 6vw, 86px) 58px;
   color: #fff;
   background:
+    linear-gradient(115deg, rgba(7, 22, 36, 0.9) 0%, rgba(7, 22, 36, 0.76) 48%, rgba(7, 22, 36, 0.42) 100%),
+    var(--hero-image, linear-gradient(115deg, transparent, transparent)),
     linear-gradient(115deg, color-mix(in srgb, var(--brand-dark) 90%, #000 10%) 0%, color-mix(in srgb, var(--brand) 78%, #000 22%) 56%, color-mix(in srgb, var(--brand) 50%, var(--accent) 50%) 100%);
+  background-position: center;
+  background-size: cover;
   overflow: hidden;
   position: relative;
 }
@@ -518,7 +530,7 @@ textarea {
 
 .source-section ul {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   padding: 0;
   margin: 30px 0 0;
@@ -531,6 +543,7 @@ textarea {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.14);
   box-shadow: none;
+  overflow-wrap: anywhere;
 }
 
 .site-footer {
@@ -582,11 +595,15 @@ textarea {
 .mobile-call-bar a,
 .mobile-call-bar button {
   min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 0;
   border-radius: 8px;
   color: #fff;
   background: var(--accent-dark);
   font-weight: 950;
+  text-align: center;
 }
 
 .mobile-call-bar button {
@@ -638,7 +655,11 @@ textarea {
 
 @media (max-width: 1060px) {
   .site-header {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .brand {
+    min-width: 0;
   }
 
   .site-nav {
@@ -670,6 +691,7 @@ textarea {
   .menu-toggle {
     display: block;
     justify-self: end;
+    grid-column: 2;
   }
 
   .header-call {
@@ -701,7 +723,8 @@ textarea {
   }
 
   h1 {
-    font-size: clamp(2.7rem, 16vw, 4.4rem);
+    font-size: clamp(2.35rem, 11vw, 3.2rem);
+    line-height: 1;
   }
 
   h2 {
@@ -721,6 +744,43 @@ textarea {
   .impact-band {
     grid-template-columns: 1fr;
     margin: 0 18px;
+  }
+
+  .hero-copy {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .hero-actions {
+    margin-top: 22px;
+  }
+
+  .proof-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 24px;
+  }
+
+  .proof-grid div {
+    padding: 12px 10px;
+  }
+
+  .proof-grid dt {
+    font-size: 1.05rem;
+  }
+
+  .proof-grid dd {
+    font-size: 0.74rem;
+  }
+
+  .hero-panel {
+    margin-top: 4px;
+  }
+
+  .service-card a,
+  .site-footer a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
 
   .site-footer a {
