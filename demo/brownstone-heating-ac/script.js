@@ -4,8 +4,17 @@ const nav = document.querySelector("[data-nav]");
 const estimate = document.querySelector("#estimate");
 const notesDialog = document.querySelector("[data-notes-dialog]");
 
+function closeMenu() {
+  header?.classList.remove("is-open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+}
+
 const updateHeader = () => {
   header?.classList.toggle("is-scrolled", window.scrollY > 18);
+
+  if (header?.classList.contains("is-open")) {
+    closeMenu();
+  }
 };
 
 updateHeader();
@@ -19,8 +28,7 @@ menuToggle?.addEventListener("click", () => {
 nav?.addEventListener("click", (event) => {
   const target = event.target;
   if (target instanceof HTMLElement && (target.matches("a") || target.matches("button"))) {
-    header?.classList.remove("is-open");
-    menuToggle?.setAttribute("aria-expanded", "false");
+    closeMenu();
   }
 });
 

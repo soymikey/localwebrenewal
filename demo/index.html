@@ -9,90 +9,220 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body class="demo-gallery-page">
-    <header class="site-header is-scrolled">
+    <header class="site-header is-scrolled" data-header>
       <a class="brand" href="/" aria-label="Local Web Renewal home">
         <span class="brand-mark">LWR</span>
         <span>
           <strong>Local Web Renewal</strong>
-          <small>Demo gallery</small>
+          <small>iPhone preview board</small>
         </span>
       </a>
-      <nav class="site-nav">
+      <button class="menu-button" type="button" data-menu-button aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" data-nav>
         <a href="/">Home</a>
-        <a href="/demo/new-york-heating/">New York Heating</a>
-        <a href="/demo/ice-age-mechanical/">Ice Age Mechanical</a>
-        <a href="/demo/coil-techs/">Coil Techs</a>
-        <a href="/demo/tonnage-hvac/">Tonnage HVAC-R</a>
-        <a href="/demo/air-wave-ac/">Air-Wave</a>
-        <a href="/demo/dierks-heating/">Dierks</a>
-        <a href="/demo/sl-hvac-systems/">S&L HVAC</a>
+        <a href="#previews">Previews</a>
+        <a href="mailto:michael@localwebrenewal.com?subject=Website%20renewal%20demo">Email Michael</a>
       </nav>
       <a class="header-cta" href="mailto:michael@localwebrenewal.com?subject=Website%20renewal%20demo">Email Michael</a>
     </header>
 
     <main class="demo-gallery">
-      <section class="section">
+      <section class="section demo-gallery-intro">
         <p class="eyebrow">Demo gallery</p>
-        <h1>Sample website renewals for local service businesses.</h1>
+        <h1>iPhone 17 Pro Max previews for every outreach demo.</h1>
         <p>
-          Each concept demo lives at its own client-specific path so outreach links can stay clean,
-          focused, and easy to expand. Demos are created from public information and are not official client websites.
+          Each card shows the live client-specific demo in a 440 x 956 CSS pixel viewport, matching the common
+          iPhone 17 Pro Max web layout size. Open a card to inspect the full responsive page.
         </p>
-        <div class="demo-list">
-          <a class="demo-list-card" href="/demo/new-york-heating/">
+      </section>
+
+      <section class="demo-preview-grid" id="previews" aria-label="Client demo previews">
+        <article class="demo-preview-card">
+          <div class="demo-preview-copy">
             <span>HVAC concept demo</span>
-            <strong>New York Heating & Air Conditioning</strong>
-            <p>Staten Island HVAC homepage renewal concept with clearer calls, service paths, and trust signals.</p>
-          </a>
-          <a class="demo-list-card" href="/demo/ice-age-mechanical/">
+            <h2>New York Heating & Air Conditioning</h2>
+            <p>Staten Island HVAC concept with clearer calls, service paths, and trust signals.</p>
+            <a href="/demo/new-york-heating/">Open demo</a>
+          </div>
+          <div class="phone-preview" aria-label="New York Heating iPhone preview"><span class="phone-island" aria-hidden="true"></span><span class="phone-button phone-button-left" aria-hidden="true"></span><span class="phone-button phone-button-right" aria-hidden="true"></span><div class="phone-screen"><iframe title="New York Heating mobile preview" src="/demo/new-york-heating/" loading="lazy"></iframe></div></div>
+        </article>
+
+        <article class="demo-preview-card">
+          <div class="demo-preview-copy">
             <span>HVAC concept demo</span>
-            <strong>Ice Age Mechanical Corp</strong>
-            <p>Brooklyn HVAC homepage renewal concept with stronger emergency, Mitsubishi dealer, and contact paths.</p>
-          </a>
-          <a class="demo-list-card" href="/demo/coil-techs/">
+            <h2>Ice Age Mechanical Corp</h2>
+            <p>Brooklyn HVAC concept with stronger emergency, Mitsubishi dealer, and contact paths.</p>
+            <a href="/demo/ice-age-mechanical/">Open demo</a>
+          </div>
+          <div class="phone-preview" aria-label="Ice Age Mechanical iPhone preview"><span class="phone-island" aria-hidden="true"></span><span class="phone-button phone-button-left" aria-hidden="true"></span><span class="phone-button phone-button-right" aria-hidden="true"></span><div class="phone-screen"><iframe title="Ice Age Mechanical mobile preview" src="/demo/ice-age-mechanical/" loading="lazy"></iframe></div></div>
+        </article>
+
+        <article class="demo-preview-card">
+          <div class="demo-preview-copy">
             <span>HVAC concept demo</span>
-            <strong>Coil Techs</strong>
-            <p>Staten Island HVAC homepage renewal concept with clearer service hierarchy and commercial inquiry paths.</p>
-          </a>
-          <a class="demo-list-card" href="/demo/tonnage-hvac/">
+            <h2>Coil Techs</h2>
+            <p>Staten Island HVAC concept with clearer service hierarchy and commercial inquiry paths.</p>
+            <a href="/demo/coil-techs/">Open demo</a>
+          </div>
+          <div class="phone-preview" aria-label="Coil Techs iPhone preview"><span class="phone-island" aria-hidden="true"></span><span class="phone-button phone-button-left" aria-hidden="true"></span><span class="phone-button phone-button-right" aria-hidden="true"></span><div class="phone-screen"><iframe title="Coil Techs mobile preview" src="/demo/coil-techs/" loading="lazy"></iframe></div></div>
+        </article>
+
+        <article class="demo-preview-card">
+          <div class="demo-preview-copy">
             <span>HVAC-R concept demo</span>
-            <strong>Tonnage HVAC-R</strong>
-            <p>Greater NYC HVAC-R homepage renewal concept with clearer repair, installation, commercial, and air quality paths.</p>
-          </a>
-          <a class="demo-list-card" href="/demo/air-wave-ac/">
+            <h2>Tonnage HVAC-R</h2>
+            <p>Greater NYC HVAC-R concept with clearer repair, installation, commercial, and air quality paths.</p>
+            <a href="/demo/tonnage-hvac/">Open demo</a>
+          </div>
+          <div class="phone-preview" aria-label="Tonnage HVAC-R iPhone preview"><span class="phone-island" aria-hidden="true"></span><span class="phone-button phone-button-left" aria-hidden="true"></span><span class="phone-button phone-button-right" aria-hidden="true"></span><div class="phone-screen"><iframe title="Tonnage HVAC-R mobile preview" src="/demo/tonnage-hvac/" loading="lazy"></iframe></div></div>
+        </article>
+
+        <article class="demo-preview-card">
+          <div class="demo-preview-copy">
             <span>Air conditioning concept demo</span>
-            <strong>Air-Wave Air Conditioning</strong>
-            <p>Bronx room AC specialist renewal concept with clearer sales, service, storage, PTAC, and building-account paths.</p>
-          </a>
-          <a class="demo-list-card" href="/demo/dierks-heating/">
+            <h2>Air-Wave Air Conditioning</h2>
+            <p>Bronx room AC specialist concept with clearer sales, service, storage, PTAC, and building paths.</p>
+            <a href="/demo/air-wave-ac/">Open demo</a>
+          </div>
+          <div class="phone-preview" aria-label="Air-Wave iPhone preview"><span class="phone-island" aria-hidden="true"></span><span class="phone-button phone-button-left" aria-hidden="true"></span><span class="phone-button phone-button-right" aria-hidden="true"></span><div class="phone-screen"><iframe title="Air-Wave Air Conditioning mobile preview" src="/demo/air-wave-ac/" loading="lazy"></iframe></div></div>
+        </article>
+
+        <article class="demo-preview-card">
+          <div class="demo-preview-copy">
             <span>HVAC / mechanical concept demo</span>
-            <strong>Dierks Heating Company</strong>
-            <p>Long Island City contractor renewal concept with clearer project, service, and direct inquiry paths.</p>
-          </a>
-          <a class="demo-list-card" href="/demo/sl-hvac-systems/">
+            <h2>Dierks Heating Company</h2>
+            <p>Long Island City contractor concept with clearer project, service, and direct inquiry paths.</p>
+            <a href="/demo/dierks-heating/">Open demo</a>
+          </div>
+          <div class="phone-preview" aria-label="Dierks Heating iPhone preview"><span class="phone-island" aria-hidden="true"></span><span class="phone-button phone-button-left" aria-hidden="true"></span><span class="phone-button phone-button-right" aria-hidden="true"></span><div class="phone-screen"><iframe title="Dierks Heating mobile preview" src="/demo/dierks-heating/" loading="lazy"></iframe></div></div>
+        </article>
+
+        <article class="demo-preview-card">
+          <div class="demo-preview-copy">
             <span>HVAC concept demo</span>
-            <strong>S&L HVAC Systems Corp</strong>
-            <p>Queens and NYC HVAC renewal concept with stronger phone-first mobile quote routing.</p>
-          </a>
-          <a class="demo-list-card" href="/demo/vega-hvac/">
+            <h2>S&L HVAC Systems Corp</h2>
+            <p>Queens and NYC HVAC concept with stronger phone-first mobile quote routing.</p>
+            <a href="/demo/sl-hvac-systems/">Open demo</a>
+          </div>
+          <div class="phone-preview" aria-label="S&L HVAC Systems iPhone preview"><span class="phone-island" aria-hidden="true"></span><span class="phone-button phone-button-left" aria-hidden="true"></span><span class="phone-button phone-button-right" aria-hidden="true"></span><div class="phone-screen"><iframe title="S&L HVAC Systems mobile preview" src="/demo/sl-hvac-systems/" loading="lazy"></iframe></div></div>
+        </article>
+
+        <article class="demo-preview-card">
+          <div class="demo-preview-copy">
             <span>HVAC concept demo</span>
-            <strong>Vega HVAC Contracting Corp</strong>
-            <p>Brooklyn HVAC renewal concept showing an independent homepage beyond a hosted business listing.</p>
-          </a>
-          <a class="demo-list-card" href="/demo/gemini-thermo-hvac/">
+            <h2>Vega HVAC Contracting Corp</h2>
+            <p>Brooklyn HVAC concept showing an independent homepage beyond a hosted business listing.</p>
+            <a href="/demo/vega-hvac/">Open demo</a>
+          </div>
+          <div class="phone-preview" aria-label="Vega HVAC iPhone preview"><span class="phone-island" aria-hidden="true"></span><span class="phone-button phone-button-left" aria-hidden="true"></span><span class="phone-button phone-button-right" aria-hidden="true"></span><div class="phone-screen"><iframe title="Vega HVAC mobile preview" src="/demo/vega-hvac/" loading="lazy"></iframe></div></div>
+        </article>
+
+        <article class="demo-preview-card">
+          <div class="demo-preview-copy">
             <span>HVAC concept demo</span>
-            <strong>Gemini Thermo HVAC</strong>
-            <p>Brooklyn HVAC renewal concept turning public contact basics into a clearer service and callback flow.</p>
-          </a>
-          <a class="demo-list-card" href="/demo/brownstone-heating-ac/">
+            <h2>Gemini Thermo HVAC</h2>
+            <p>Brooklyn HVAC concept turning public contact basics into a clearer service and callback flow.</p>
+            <a href="/demo/gemini-thermo-hvac/">Open demo</a>
+          </div>
+          <div class="phone-preview" aria-label="Gemini Thermo HVAC iPhone preview"><span class="phone-island" aria-hidden="true"></span><span class="phone-button phone-button-left" aria-hidden="true"></span><span class="phone-button phone-button-right" aria-hidden="true"></span><div class="phone-screen"><iframe title="Gemini Thermo HVAC mobile preview" src="/demo/gemini-thermo-hvac/" loading="lazy"></iframe></div></div>
+        </article>
+
+        <article class="demo-preview-card">
+          <div class="demo-preview-copy">
             <span>HVAC concept demo</span>
-            <strong>Brownstone Heating & Air Conditioning</strong>
-            <p>Brooklyn HVAC renewal concept focused on sharper local positioning and estimate conversion.</p>
-          </a>
-        </div>
+            <h2>Brownstone Heating & Air Conditioning</h2>
+            <p>Brooklyn HVAC concept focused on sharper local positioning and estimate conversion.</p>
+            <a href="/demo/brownstone-heating-ac/">Open demo</a>
+          </div>
+          <div class="phone-preview" aria-label="Brownstone Heating and AC iPhone preview"><span class="phone-island" aria-hidden="true"></span><span class="phone-button phone-button-left" aria-hidden="true"></span><span class="phone-button phone-button-right" aria-hidden="true"></span><div class="phone-screen"><iframe title="Brownstone Heating and Air Conditioning mobile preview" src="/demo/brownstone-heating-ac/" loading="lazy"></iframe></div></div>
+        </article>
       </section>
     </main>
 
     <script type="module" src="/script.js"></script>
+    <script>
+      document.querySelectorAll(".phone-screen").forEach((screen) => {
+        const iframe = screen.querySelector("iframe");
+        let lastTouchY = null;
+
+        const hideFrameScrollbar = () => {
+          const doc = iframe.contentDocument;
+          if (!doc || doc.getElementById("demo-preview-scrollbar-style")) return;
+
+          const style = doc.createElement("style");
+          style.id = "demo-preview-scrollbar-style";
+          style.textContent = `
+            html,
+            body {
+              scrollbar-width: none;
+              -ms-overflow-style: none;
+            }
+
+            html::-webkit-scrollbar,
+            body::-webkit-scrollbar {
+              width: 0;
+              height: 0;
+              display: none;
+            }
+          `;
+          doc.head.appendChild(style);
+        };
+
+        const getFrameState = () => {
+          const win = iframe.contentWindow;
+          const doc = iframe.contentDocument?.documentElement;
+          if (!win || !doc) return null;
+
+          const scale = iframe.getBoundingClientRect().height / iframe.offsetHeight;
+          return {
+            win,
+            scale: scale || 1,
+            maxScroll: Math.max(0, doc.scrollHeight - win.innerHeight),
+            scrollY: win.scrollY,
+          };
+        };
+
+        iframe.addEventListener("load", hideFrameScrollbar);
+        hideFrameScrollbar();
+
+        screen.addEventListener(
+          "touchstart",
+          (event) => {
+            lastTouchY = event.touches[0]?.clientY ?? null;
+          },
+          { passive: true }
+        );
+
+        screen.addEventListener(
+          "touchmove",
+          (event) => {
+            if (lastTouchY === null || !event.touches[0]) return;
+
+            const state = getFrameState();
+            if (!state) return;
+
+            const currentY = event.touches[0].clientY;
+            const delta = (lastTouchY - currentY) / state.scale;
+            const canScrollDown = delta > 0 && state.scrollY < state.maxScroll;
+            const canScrollUp = delta < 0 && state.scrollY > 0;
+
+            if (canScrollDown || canScrollUp) {
+              event.preventDefault();
+              state.win.scrollBy(0, delta);
+              lastTouchY = currentY;
+            }
+          },
+          { passive: false }
+        );
+
+        screen.addEventListener(
+          "touchend",
+          () => {
+            lastTouchY = null;
+          },
+          { passive: true }
+        );
+      });
+    </script>
   </body>
 </html>

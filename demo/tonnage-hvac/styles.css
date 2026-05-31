@@ -712,17 +712,18 @@ textarea {
   }
 
   .site-header.is-open .site-nav {
-    position: fixed;
-    top: 80px;
+    position: absolute;
+    top: calc(100% + 8px);
     right: 18px;
-    left: 18px;
-    z-index: 41;
+    left: auto;
+    width: min(220px, calc(100vw - 36px));
+    z-index: 60;
     display: grid;
     gap: 0;
     padding: 10px;
     border: 1px solid var(--line);
     border-radius: 8px;
-    background: var(--cream);
+    background: var(--panel, #fff);
     box-shadow: var(--shadow);
   }
 
@@ -776,9 +777,10 @@ textarea {
   }
 
   .site-header.is-open .site-nav {
-    top: 72px;
+    top: calc(100% + 8px);
     right: 12px;
-    left: 12px;
+    left: auto;
+    width: min(220px, calc(100vw - 24px));
   }
 
   .brand {

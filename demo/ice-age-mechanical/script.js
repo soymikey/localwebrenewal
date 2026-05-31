@@ -15,6 +15,10 @@ function syncChrome() {
   const isScrolled = window.scrollY > 28;
   header.classList.toggle("is-scrolled", isScrolled);
   callBar.classList.toggle("is-visible", window.scrollY > 520);
+
+  if (header.classList.contains("is-open")) {
+    closeMenu();
+  }
 }
 
 function closeMenu() {
