@@ -133,7 +133,7 @@ textarea {
 .button.primary {
   background: var(--blue);
   color: var(--white);
-  box-shadow: 0 14px 30px rgba(4, 100, 176, 0.28);
+  box-shadow: none;
 }
 
 .button.secondary {
@@ -153,8 +153,8 @@ textarea {
   height: 44px;
   border: 0;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.2);
   color: currentColor;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .menu-toggle span {
@@ -641,7 +641,7 @@ textarea {
   padding: 10px;
   border-radius: 999px;
   background: rgba(22, 34, 48, 0.94);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.24);
+  box-shadow: none;
   transform: translateY(120%);
   transition: transform 180ms ease;
 }
@@ -736,7 +736,7 @@ textarea {
   }
 
   .menu-toggle {
-    display: inline-grid;
+    display: block;
     justify-self: end;
     grid-column: 2;
   }
