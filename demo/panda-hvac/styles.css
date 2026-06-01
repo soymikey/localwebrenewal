@@ -501,8 +501,10 @@ h3 {
   color: #fff;
 }
 
-.mobile-call-bar.is-visible {
-  display: grid;
+@media (max-width: 640px) {
+  .mobile-call-bar.is-visible {
+    display: grid;
+  }
 }
 
 dialog {
