@@ -47,6 +47,26 @@ Current HVAC outreach demos:
 | Cool Tech HVAC Corp | `/demo/cool-tech-hvac/` | More visitors can move from a public profile or homepage into a clear repair, installation, or maintenance action. |
 | Forgenie HVAC | `/demo/forgenie-hvac/` | More Brooklyn mobile visitors can call or request HVAC help before searching through a small service site. |
 
+| MR. AIR NYC | `/demo/mr-air-nyc/` | Brooklyn mini-split and heat pump visitors can choose design, install, repair, or maintenance help faster from the first screen. |
+
+| Fresh Cool Air Corp | `/demo/fresh-cool-air/` | Commercial visitors can move from broad service copy into a clear call, service, or estimate path faster. |
+
+| Nu-Way Heating & Cooling Inc. | `/demo/nu-way-hvac/` | Property managers and builders can move from portfolio proof into installation, service, or maintenance inquiries faster. |
+
+| Climate Control HVAC | `/demo/climate-control-hvac/` | Home and business visitors can choose repair, installation, maintenance, or emergency help without scanning multiple sections. |
+
+| Air Rescue NY | `/demo/air-rescue-ny/` | Urgent visitors can call for HVAC help before working through sliders, menus, or lower-page service blocks. |
+
+| Profair Corp. | `/demo/profair-corp/` | Profile visitors can understand the AC installation offer and reach the company without navigating a directory-style page. |
+
+| Lebess Mechanical Corp. | `/demo/lebess-mechanical/` | Commercial and residential visitors can choose HVAC, refrigeration, service, or project help without a bare contact-only experience. |
+
+| AquaTech Mechanical | `/demo/aquatech-mechanical/` | Visitors can quickly choose HVAC, electrical, generator, or service-area help while phone contact remains primary. |
+
+| Temperature Management Corp | `/demo/temperature-management/` | Visitors can call or choose residential, commercial, repair, or installation help without digging through a traditional service layout. |
+
+| R.A.M.S. Mechanical Inc. | `/demo/rams-mechanical/` | Commercial buyers can choose HVAC, sheet metal, ductwork, or project quote help faster from the homepage. |
+
 When adding or removing demos, update both this table and `demo/index.html`.
 
 ## Development
