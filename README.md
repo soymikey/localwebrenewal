@@ -46,27 +46,25 @@ Current HVAC outreach demos:
 | Elite Air Conditioning & Beyond Inc | `/demo/elite-ac-beyond/` | AC and heating visitors can choose repair or replacement help without working through generic contact details first. |
 | Cool Tech HVAC Corp | `/demo/cool-tech-hvac/` | More visitors can move from a public profile or homepage into a clear repair, installation, or maintenance action. |
 | Forgenie HVAC | `/demo/forgenie-hvac/` | More Brooklyn mobile visitors can call or request HVAC help before searching through a small service site. |
-
 | MR. AIR NYC | `/demo/mr-air-nyc/` | Brooklyn mini-split and heat pump visitors can choose design, install, repair, or maintenance help faster from the first screen. |
-
 | Fresh Cool Air Corp | `/demo/fresh-cool-air/` | Commercial visitors can move from broad service copy into a clear call, service, or estimate path faster. |
-
 | Nu-Way Heating & Cooling Inc. | `/demo/nu-way-hvac/` | Property managers and builders can move from portfolio proof into installation, service, or maintenance inquiries faster. |
-
 | Climate Control HVAC | `/demo/climate-control-hvac/` | Home and business visitors can choose repair, installation, maintenance, or emergency help without scanning multiple sections. |
-
 | Air Rescue NY | `/demo/air-rescue-ny/` | Urgent visitors can call for HVAC help before working through sliders, menus, or lower-page service blocks. |
-
 | Profair Corp. | `/demo/profair-corp/` | Profile visitors can understand the AC installation offer and reach the company without navigating a directory-style page. |
-
 | Lebess Mechanical Corp. | `/demo/lebess-mechanical/` | Commercial and residential visitors can choose HVAC, refrigeration, service, or project help without a bare contact-only experience. |
-
 | AquaTech Mechanical | `/demo/aquatech-mechanical/` | Visitors can quickly choose HVAC, electrical, generator, or service-area help while phone contact remains primary. |
-
 | Temperature Management Corp | `/demo/temperature-management/` | Visitors can call or choose residential, commercial, repair, or installation help without digging through a traditional service layout. |
-
 | R.A.M.S. Mechanical Inc. | `/demo/rams-mechanical/` | Commercial buyers can choose HVAC, sheet metal, ductwork, or project quote help faster from the homepage. |
-
+| City Cool Air, Inc. | `/demo/city-cool-air/` | Building managers can choose PTAC repair, commercial HVAC service, installation, or maintenance paths faster from the first screen. |
+| Henick-Lane | `/demo/henick-lane/` | Commercial buyers can identify the right repair, maintenance, installation, or mechanical construction path without scanning a long legacy site. |
+| Cam Energy | `/demo/cam-energy/` | Home and business visitors can choose HVAC service, heating, AC, plumbing, or emergency help before searching through general company copy. |
+| S&M HVAC | `/demo/sm-hvac/` | Brooklyn visitors can call, request service, or choose a common HVAC path before working through a visual gallery-style site. |
+| Berry's Cooling & Heating | `/demo/berrys-cooling/` | Property managers can move from brand recognition into cooling service, heating service, replacement, or quote requests faster. |
+| Waves HVAC | `/demo/waves-hvac/` | NYC visitors can choose residential, commercial, or sector-specific HVAC help faster without reading through broad SEO copy first. |
+| Sasson Mechanical | `/demo/sasson-mechanical/` | Staten Island visitors can understand the service offer and contact Sasson Mechanical before scrolling through general portfolio copy. |
+| Empire HVAC | `/demo/empire-hvac/` | Staten Island visitors can call, request service, or choose AC, heating, installation, or repair paths immediately. |
+| RK Plumbing & HVAC Services | `/demo/rk-plumbing-hvac/` | Visitors can separate emergency plumbing, HVAC service, heating, and maintenance needs without digging through a mixed-service homepage. |
 When adding or removing demos, update both this table and `demo/index.html`.
 
 ## Development
