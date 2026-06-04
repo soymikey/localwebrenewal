@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fushimi Menu Trainer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Fushimi Williamsburg</p>
+          <h1>菜单图片记忆</h1>
+        </div>
+        <div class="score">
+          <span id="progressText">0 / 0</span>
+          <strong id="accuracyText">0%</strong>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="练习设置">
+        <select id="categorySelect" aria-label="选择分类"></select>
+        <button id="modeLearn" class="mode active" type="button">学习</button>
+        <button id="modeQuiz" class="mode" type="button">测验</button>
+        <button id="modeWrong" class="mode" type="button">错题</button>
+      </section>
+
+      <section class="trainer">
+        <div class="imageWrap">
+          <img id="dishImage" alt="" />
+        </div>
+        <div class="info">
+          <p id="categoryText" class="category"></p>
+          <h2 id="dishName"></h2>
+          <div class="pronounce">
+            <button id="speakBtn" type="button">读菜名</button>
+            <button id="slowSpeakBtn" type="button">慢速读</button>
+          </div>
+          <p id="chineseName" class="chinese"></p>
+          <p id="description" class="description"></p>
+          <p id="price" class="price"></p>
+        </div>
+        <div id="choices" class="choices"></div>
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+      </section>
+
+      <nav class="actions">
+        <button id="prevBtn" type="button">上一张</button>
+        <button id="revealBtn" type="button">显示答案</button>
+        <button id="nextBtn" type="button">下一张</button>
+      </nav>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
